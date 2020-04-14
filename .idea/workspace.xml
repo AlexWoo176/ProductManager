@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0679f77-02f0-4009-8140-8271186e68be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ProductRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -112,6 +110,8 @@
       <workItem from="1586758816175" duration="15439000" />
       <workItem from="1586780260128" duration="15543000" />
       <workItem from="1586827510691" duration="1213000" />
+      <workItem from="1586851226692" duration="75000" />
+      <workItem from="1586853350706" duration="345000" />
     </task>
     <servers />
   </component>
@@ -163,10 +163,10 @@
       <screen x="0" y="27" width="1600" height="800" />
     </state>
     <state x="453" y="44" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1600.800@0.27.1600.800" timestamp="1586791517903" />
-    <state x="533" y="185" width="524" height="481" key="extract.method.dialog" timestamp="1586790282606">
+    <state x="533" y="185" width="524" height="481" key="extract.method.dialog" timestamp="1586853790246">
       <screen x="0" y="27" width="1600" height="800" />
     </state>
-    <state x="533" y="185" width="524" height="481" key="extract.method.dialog/0.27.1600.800@0.27.1600.800" timestamp="1586790282606" />
+    <state x="533" y="185" width="524" height="481" key="extract.method.dialog/0.27.1600.800@0.27.1600.800" timestamp="1586853790246" />
     <state x="109" y="28" width="1372" height="796" key="new project wizard" timestamp="1586829662687">
       <screen x="0" y="27" width="1600" height="800" />
     </state>

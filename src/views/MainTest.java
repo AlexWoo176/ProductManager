@@ -14,63 +14,69 @@ public class MainTest {
     public static void main(String[] args) {
         ProductController productController = new ProductController();
         int choice;
-        do { showChoice();
+        do {
+            showChoice();
             System.out.println("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine();
-            switch (choice) {
-                case 1:
-                    List<Product> productList = productController.showProductList();
-                    for (Product product : productList) {
-                        System.out.println(product.toString());
-                    }
-                    break;
-                case 2:
-                    System.out.println("Add product: ");
-                    Product product1 = ProductRepoImpl.createProduct();
-                    productController.add(product1);
-                    break;
-                case 3:
-                    System.out.println("Enter index for editing: ");
-                    int indexEdit = scanner.nextInt();
-                    productController.editProduct(indexEdit, ProductRepoImpl.createProduct());
-                    break;
-                case 4:
-                    System.out.println("Enter index for removing:");
-                    int indexRemove = scanner.nextInt();
-                    productController.removeProduct(indexRemove);
-                    break;
-                case 5:
-                    System.out.println("Enter a product Name:  ");
-                    String name= scanner.nextLine();
-                    System.out.println(productController.findByName(name));
-                    break;
-                case 6:
-                    System.out.println("Enter a product ID:  ");
-                    int id = scanner.nextInt();
-                    productController.findById(id);
-                    break;
-                case 7:
-                    System.out.println("Arrange product list upPrice");
-                    productController.sortUp();
-                    break;
-                case 8:
-                    System.out.println(" Arrange product list downPrice:");
-                    productController.sortDown();
-                    break;
-                case 9:
-                    System.out.println("Storing Product Information");
-                    ProductFile productFile = new ProductFile();
-                    productFile.writeFile();
-                    productFile.readFile();
-                    break;
-                case 0:
-                    System.exit(0);
-                default:
-                    System.out.println("You didn't make any choice");
-            }
+            selectMenu(productController, choice);
         } while (choice != 0);
     }
+
+    public static void selectMenu(ProductController productController, int choice) {
+        switch (choice) {
+            case 1:
+                List<Product> productList = productController.showProductList();
+                for (Product product : productList) {
+                    System.out.println(product.toString());
+                }
+                break;
+            case 2:
+                System.out.println("Add product: ");
+                Product product1 = ProductRepoImpl.createProduct();
+                productController.add(product1);
+                break;
+            case 3:
+                System.out.println("Enter index for editing: ");
+                int indexEdit = scanner.nextInt();
+                productController.editProduct(indexEdit, ProductRepoImpl.createProduct());
+                break;
+            case 4:
+                System.out.println("Enter index for removing:");
+                int indexRemove = scanner.nextInt();
+                productController.removeProduct(indexRemove);
+                break;
+            case 5:
+                System.out.println("Enter a product Name:  ");
+                String name= scanner.nextLine();
+                System.out.println(productController.findByName(name));
+                break;
+            case 6:
+                System.out.println("Enter a product ID:  ");
+                int id = scanner.nextInt();
+                productController.findById(id);
+                break;
+            case 7:
+                System.out.println("Arrange product list upPrice");
+                productController.sortUp();
+                break;
+            case 8:
+                System.out.println(" Arrange product list downPrice:");
+                productController.sortDown();
+                break;
+            case 9:
+                System.out.println("Storing Product Information");
+                ProductFile productFile = new ProductFile();
+                productFile.writeFile();
+                productFile.readFile();
+                break;
+            case 0:
+                System.exit(0);
+            default:
+                System.out.println("You didn't make any choice");
+        }
+    }
+
     public static void showChoice() {
         System.out.println("1. Show all products");
         System.out.println("2. Add a new product");
