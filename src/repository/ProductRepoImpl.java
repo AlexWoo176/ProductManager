@@ -13,6 +13,27 @@ public class ProductRepoImpl implements ProductRepo {
         products.add(new Product(04, "Xiaomi A3", "Xiaomi", 5.0f, "Stocking", "Orange Color"));
         products.add(new Product(05, "Oppo F5", "Oppo", 15.0f, "Stocking", "Red Color"));
     }
+    public static Product createProduct() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter ID Product: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter Name Product: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter Brand Product: ");
+        String brand = scanner.nextLine();
+        System.out.println("Enter Price Product: ");
+        float price = scanner.nextFloat();
+        scanner.nextLine();
+        System.out.println("Enter Status Product: ");
+        String status = scanner.nextLine();
+        System.out.println("Enter Description Product: ");
+        String description = scanner.nextLine();
+
+        Product product = new Product(id, name, brand, price, status, description);
+
+        return product;
+    }
 
     @Override
     public List<Product> showProductList() {

@@ -72,7 +72,7 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return String.format(" ID= %-5d " + "Name = %-20s " + "Brand = %-15s " + "Price = %-10.2f" + "Status = %-15s "+
+        return String.format(" ID= %-5d" + "Name = %-20s" + "Brand = %-15s" + "Price = %-10.2f" + "Status = %-15s"+
                 "Description = %-15s", id, name, brand, price, status, description);
     }
 }

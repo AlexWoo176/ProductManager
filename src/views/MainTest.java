@@ -3,6 +3,7 @@ package views;
 import controller.ProductController;
 import controller.ProductFile;
 import model.Product;
+import repository.ProductRepoImpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -17,7 +18,6 @@ public class MainTest {
             System.out.println("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine();
-
             switch (choice) {
                 case 1:
                     List<Product> productList = productController.showProductList();
@@ -27,13 +27,13 @@ public class MainTest {
                     break;
                 case 2:
                     System.out.println("Add product: ");
-                    Product product1 = createProduct();
+                    Product product1 = ProductRepoImpl.createProduct();
                     productController.add(product1);
                     break;
                 case 3:
                     System.out.println("Enter index for editing: ");
                     int indexEdit = scanner.nextInt();
-                    productController.editProduct(indexEdit, createProduct());
+                    productController.editProduct(indexEdit, ProductRepoImpl.createProduct());
                     break;
                 case 4:
                     System.out.println("Enter index for removing:");
@@ -68,11 +68,9 @@ public class MainTest {
                     System.exit(0);
                 default:
                     System.out.println("You didn't make any choice");
-
             }
         } while (choice != 0);
     }
-
     public static void showChoice() {
         System.out.println("1. Show all products");
         System.out.println("2. Add a new product");
@@ -83,27 +81,6 @@ public class MainTest {
         System.out.println("7. Arrange product list upPrice");
         System.out.println("8. Arange product list downPrice");
         System.out.println("9. Storing Product Information");
-
         System.out.println("0. Exit");
-    }
-    public static Product createProduct() {
-        System.out.println("Enter ID Product: ");
-        int id = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Enter Name Product: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter Brand Product: ");
-        String brand = scanner.nextLine();
-        System.out.println("Enter Price Product: ");
-        float price = scanner.nextFloat();
-        scanner.nextLine();
-        System.out.println("Enter Status Product: ");
-        String status = scanner.nextLine();
-        System.out.println("Enter Description Product: ");
-        String description = scanner.nextLine();
-
-        Product product = new Product(id, name, brand, price, status, description);
-
-        return product;
     }
 }
